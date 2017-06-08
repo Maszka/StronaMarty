@@ -34,9 +34,6 @@
     Stopka
 </div>
 <script>
-    var button = document.getElementById("button");
-    var input = document.getElementById("input");
-
     function displayAlert() {
         input.value = input.value.trim();
         var imie = input.value;
@@ -54,12 +51,6 @@
         }
     }
 
-    button.addEventListener("click", displayAlert);
-
-
-    var phoneButton = document.getElementById("phone-button");
-    var phoneInput = document.getElementById("phone-input");
-
     function phoneDisplayAlert() {
         phoneInput.value = phoneInput.value.trim();
         var phoneNumber = phoneInput.value;
@@ -72,6 +63,13 @@
         }
     }
 
+    var button = document.getElementById("button");
+    var input = document.getElementById("input");
+
+    var phoneButton = document.getElementById("phone-button");
+    var phoneInput = document.getElementById("phone-input");
+
+    button.addEventListener("click", displayAlert);
     phoneButton.addEventListener("click", phoneDisplayAlert);
 </script>
 </body>
