@@ -51,11 +51,20 @@
         }
     }
 
+    function isValidPhoneNumber(phoneNumber) {
+        if (phoneNumber.match(/^(\d{2}-?\d{3}-?\d{2}-?\d{2}|(\+\d{2})?\d{3}-\d{3}-\d{3})$/)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     function phoneDisplayAlert() {
         phoneInput.value = phoneInput.value.trim();
         var phoneNumber = phoneInput.value;
 
-        if (phoneNumber.match(/^(\d{2}-?\d{3}-?\d{2}-?\d{2}|(\+\d{2})?\d{3}-\d{3}-\d{3})$/)) {
+        if (isValidPhoneNumber(phoneNumber)) {
             alert("Dobry numer telefonu")
         }
         else {
