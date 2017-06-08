@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>strona Marty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    Naglowek
+
+</div>
+<div id="content">
+    <div id="menu">
+        menu
+    </div>
+    <div id="main">
+        Tresc
+        <br>
+        <input type="text" id="input">
+        <button id="button">
+            OK
+        </button>
+    </div>
+</div>
+<div class="header">
+    Stopka
+</div>
+<script>
+    var button = document.getElementById("button");
+    var input = document.getElementById("input");
+
+    function displayAlert() {
+        input.value = input.value.trim();
+        var imie = input.value;
+
+        if (imie.match(/^[A-Z][a-z]{2,9}$/)) {
+            var lastLetter = imie.substr(-1, 1);
+            if (lastLetter === "a") {
+                alert("kobieta")
+            } else {
+                alert("mezczyzna")
+            }
+        }
+        else {
+            alert("Podales imie, ktore nie pasuje do wzorca!");
+        }
+    }
+
+    button.addEventListener("click", displayAlert);
+</script>
+</body>
+</html>
