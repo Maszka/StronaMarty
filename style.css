@@ -1,0 +1,32 @@
+div {
+    color: red;
+    font-size: 30px;
+    font-family: Cambria, Arial, sans-serif;
+    background-color: #c8ecff;
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    height: 700px;
+
+}
+
+#menu {
+    float: left;
+    width: 200px;
+}
+
+#main {
+    width: 800px;
+    float: right;
+}
+
+.header {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
