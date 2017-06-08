@@ -34,11 +34,15 @@
     Stopka
 </div>
 <script>
+    function isValidName(imie) {
+        return imie.match(/^[A-Z][a-z]{2,9}$/);
+    }
+
     function displayAlert() {
         input.value = input.value.trim();
         var imie = input.value;
 
-        if (imie.match(/^[A-Z][a-z]{2,9}$/)) {
+        if (isValidName(imie)) {
             var lastLetter = imie.substr(-1, 1);
             if (lastLetter === "a") {
                 alert("Kobieta")
