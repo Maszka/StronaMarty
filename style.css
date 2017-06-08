@@ -30,3 +30,9 @@ div {
     border-radius: 15px;
 }
 
+p {
+    font-size: 35px;
+    color: darkgreen;
+    margin-top: 0;
+}
+
