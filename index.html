@@ -15,7 +15,7 @@
         menu
     </div>
     <div id="main">
-        Tresc
+        Imię
         <br>
         <input type="text" id="input">
         <button id="button">
@@ -28,6 +28,9 @@
         <button id="phone-button">
             OK
         </button>
+        <div class="picture">
+            <img id="lampiony" src="images/lampiony.jpg">
+        </div>
     </div>
 </div>
 <div class="header">
@@ -44,11 +47,17 @@
         var imie = input.value;
 
         if (isValidName(imie)) {
+            var maleNames = ["Kuba", "Barnaba"];
+            var femaleNames = ["Nel", "Nicol", "Inez"];
             var lastLetter = imie.substr(-1, 1);
-            if (lastLetter === "a") {
-                alert("Kobieta")
-            } else {
-                alert("Mezczyzna")
+
+            if (maleNames.indexOf(imie) > -1) {
+                alert("Mezczyzna");
+            } else if (lastLetter === "a" || femaleNames.indexOf(imie) > -1) {
+                alert("Kobieta");
+            }
+            else {
+                alert("Mezczyzna");
             }
         }
         else {
